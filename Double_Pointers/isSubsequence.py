@@ -21,10 +21,20 @@
 
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        pass
+        if not s:
+            return True
+        i = 0
+        for c in t:
+            if s[i] == c:
+                i += 1
+                if i == len(s):
+                    return True
+        return False
 
 # Test
 s = "abc"
 t = "ahbgdc"
+s1 = "axc"
+t1 = "ahbgdc"
 sol = Solution()
-print(sol.isSubsequence(s, t))
+print(sol.isSubsequence(s1, t1))
