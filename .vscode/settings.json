@@ -1,4 +1,5 @@
 {
+    "github.copilot.enable": false,
     "files.associations": {
         "ostream": "cpp"
     }
