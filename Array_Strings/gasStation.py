@@ -42,8 +42,8 @@ class Solution:
         for i, (g, c) in enumerate(zip(gas, cost)):
             s += g - c
             if s < min_s:
-                min_s = s
-                ans = i + 1
+                min_s = s # update minimum gas
+                ans = i + 1 # new position of car
         return -1 if s < 0 else ans
 
 
