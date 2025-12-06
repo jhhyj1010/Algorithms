@@ -20,10 +20,12 @@ class Solution:
         L[0] = 1
         for i in range(1, length):
             L[i] = L[i-1]*nums[i-1]
+        print(L)
 
         R[length-1] = 1
         for j in reversed(range(length - 1)):
             R[j] = R[j+1]*nums[j+1]
+        print(R)
         
         for k in range(length):
             results[k] = L[k] * R[k]
